@@ -1,1 +1,73 @@
+//  Second exercise: You are requested to finish the following design pattern with a proper use case and turn-in via GitHub. Coding should be done in Java language.
+A. Structural
+
+1. Adapter - correct
+2. Facade - corrected
+3. Proxy - correct
+
+B. Creational
+
+1. Singleton
+2. Factory
+3. Builder
+
+C. Behavioural
+
+1. Chain of responsibility
+2. Memento
+3. Observer
+
+
+
+A.Structural patterns
+1. Adapter pattern 
+
+Use Case: An application for a media player that must support a variety of audio formats, such as MP3, MP4, and VLC. Other formats can be played with an adaptor if the program only supports MP3 by default.
+Implementation: Make a MediaPlayer interface using the Mp3Player implementation class. Make an adapter called MediaAdapter that plays MP4 and VLC files by implementing MediaPlayer and using AdvancedMediaPlayer internally.
+
+2. Facade
+
+Use Case: A sophisticated home entertainment system that includes a projector, amplifier, DVD player, and lights. The theater system may be started and stopped more easily with the help of the HomeTheaterFacade class.
+Implementation: To internally coordinate various subsystems, create classes for amplifiers, DVD players, etc., as well as a HomeTheaterFacade class with methods like watchMovie() and endMovie().
+
+3.Proxy
+
+Use Case: Setting up a virtual proxy to load big pictures. A photo gallery app that only loads images when users view them may use this.
+Implementation: Build an Image interface using the classes ProxyImage (which loads the image when it is requested) and RealImage (which loads an image).
+
+B. Creational
+
+1. Singleton
+Use Case: A database connection pool in which a whole application's database connections can only be managed by a single instance.
+Implementation: To guarantee that only one instance is created, create a DatabaseConnectionPool class with a public static getInstance() function and a private constructor.
+Pattern of the Factory
+
+2.Factory
+
+Use Case: A logistics application that requires the dynamic creation of trucks, ships, and airplanes according to the kind of transportation needed.
+Implementation: Make concrete classes for trucks, ships, and airplanes and an abstract class for transport. Based on a given, a TransportFactory class returns the relevant transport.
+Pattern for Builders.
+
+3.Builder
+
+Use Case: Constructing a House object with add-ons like a yard, garage, and pool.
+Implementation: Make a House class that has a HouseBuilder class nested inside it. Build() returns the built House, whereas each of HouseBuilder's methods adds a particular feature.
+
+C. Behavioural
+
+1. Chain of responsibility
+
+Use Case: Managing user input validation in a web form that requires several checks (e.g., strong password, mandatory fields, email format).
+Implementation: Make an abstract ValidationHandler class and concrete classes that handle the validation request sequentially, such as RequiredFieldHandler, EmailFormatHandler, and PasswordStrengthHandler.
+
+2. Memento
+
+Use Case: Implementing a game that allows the player's progress—such as score, level, and state—to be saved and restored at various checkpoints is the use case.
+Implementation: To store the state of the game, create two classes: GameState and Memento. Implement checkpoint saving and restoration techniques in GameState.
+
+3. Observer
+
+Use Case: An application for the stock market where several modules (such as the user dashboard and notification service) must be updated in response to changes in stock prices.
+Implementation: As the subject that keeps track of observers, create a StockMarket class. Classes like Dashboard and NotificationService implement the Observer interface.
+
 
